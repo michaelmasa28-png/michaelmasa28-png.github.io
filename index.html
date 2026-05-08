@@ -82,4 +82,14 @@
     function sendMessage() {
       const input = document.getElementById("msgInput");
       const msg = input.value;
-
+      if (msg.trim() !== "") {
+        const messages = document.getElementById("messages");
+        const newMsg = document.createElement("p");
+        newMsg.textContent = "You: " + msg;
+        messages.appendChild(newMsg);
+        input.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
