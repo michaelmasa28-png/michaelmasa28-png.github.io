@@ -5,8 +5,9 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    background-color: lightblue
+    font-family: Arial, sans-serif; /*
+    line-height: 1.7;
     color: #333;
 }
 
