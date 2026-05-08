@@ -1,23 +1,99 @@
-<!-- Chat Section -->
-<section class="chat">
-  <h2>Live Chat</h2>
-  <div id="chat">
-    <div id="messages"></div>
-    <input id="msgInput" type="text" placeholder="Type a message...">
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masa - Services</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">MASA</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#chat">Chat</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<script>
-function sendMessage() {
-  const input = document.getElementById("msgInput");
-  const msg = input.value;
-  if (msg.trim() !== "") {
-    const messages = document.getElementById("messages");
-    const newMsg = document.createElement("p");
-    newMsg.textContent = "You: " + msg;
-    messages.appendChild(newMsg);
-    input.value = "";
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <h1>Welcome to MASA</h1>
+    <p>Your tutoring and web services hub.</p>
+    <button class="cta-button">Get Started</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m Doublem, a KCSE math tutor and aspiring web developer. This site showcases my services and projects.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Calculator</h3>
+        <p>A simple HTML/JS calculator project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Login Page</h3>
+        <p>A styled login form with HTML/CSS.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chat Section -->
+  <section id="chat" class="chat">
+    <h2>Live Chat</h2>
+    <div id="chatBox">
+      <div id="messages"></div>
+      <input id="msgInput" type="text" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" class="cta-button">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 MASA Tutoring. All rights reserved.</p>
+  </footer>
+
+  <!-- Chat Script -->
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("msgInput");
+      const msg = input.value;
+      if (msg.trim() !== "") {
+        const messages = document.getElementById("messages");
+        const newMsg = document.createElement("p");
+        newMsg.textContent = "You: " + msg;
+        messages.appendChild(newMsg);
+        input.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
+
   }
 }
 </script>
