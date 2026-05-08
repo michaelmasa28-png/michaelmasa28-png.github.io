@@ -10,6 +10,11 @@ body {
     line-height: 1.7;
     color: #333;
     }
+
+/* Hover effect */
+body:hover {
+    background-color: lightblue;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
